@@ -1,0 +1,319 @@
+SKTOP-FIOVAPR:~# cd linuxassignment
+root@DESKTOP-FIOVAPR:~/linuxassignment# mkdir q2
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat >data.txt
+Within thine own bud buriest thy content,
+And tender churl mak'st waste in niggarding:
+Pity the world, or else this glutton be,
+To eat the world's due, by the grave and thee.
+When forty winters shall besiege thy brow,
+And dig deep trenches in thy beauty's field,
+Thy youth's proud livery so gazed on now,
+Will be a tattered weed of small worth held:
+Then being asked, where all thy beauty lies,
+Where all the treasure of thy lusty days;
+
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat >data.txt
+From fairest creatures we desire increase,
+That thereby beauty's rose might never die,
+But as the riper should by time decease,
+His tender heir might bear his memory:
+But thou contracted to thine own bright eyes,
+Within thine own bud buriest thy content,
+And tender churl mak'st waste in niggarding:
+Pity the world, or else this glutton be,
+root@DESKTOP-FIOVAPR:~/linuxassignment#
+root@DESKTOP-FIOVAPR:~/linuxassignment# 5,
+5nd dig deep trenches in thy beauty's field,
+4hy youth's proud livery so gazed on now,
+5ill be a tattered weed of small worth held:
+45en being asked, where all thy beauty lies,
+4here all the treasure of thy lusty days;root@DESKTOP-FIOVAPR:~/linuxassignment#
+55root@DESKTOP-FIOVAPR:~/linuxassignment# head 10 number.txt
+head: cannot open '10' for reading: No such file or directory
+==> number.txt <==y's rose might never die,
+1ut as the riper should by time decease,
+2is tender heir might bear his memory:
+3ut thou contracted to thine own bright eyes,
+4ithin thine own bud buriest thy content,
+5nd tender churl mak'st waste in niggarding:
+6ity the world, or else this glutton be,
+5o eat the world's due, by the grave and thee.
+4hen forty winters shall besiege thy brow,
+5oot@DESKTOP-FIOVAPR:~/linuxassignment# head 10 data.txt
+45ad: cannot open '10' for reading: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# tail -5 number.txt
+4rom fairest creatures we desire increase,
+5hat thereby beauty's rose might never die,
+45t as the riper should by time decease,
+4is tender heir might bear his memory:
+55root@DESKTOP-FIOVAPR:~/linuxassignment# cat > input.txt
+hellosandesh own bud buriest thy content,
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr[:lower:] [:upper:]
+tr[:lower:]: command not foundlutton be,
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:]
+HELLOSANDESHinters shall besiege thy brow,
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:] mv i
+tr: extra operand ‘mv’for reading: No such file or directory
+Try 'tr --help' for more information.
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:] | mv i
+mv: missing destination file operand after 'i'
+Try 'mv --help' for more information.be,
+root@DESKTOP-FIOVAPR:~/linuxassignment# lshee.
+Q2  data.txt  docs  docs1.zip  file1.txt  input.txt  new  number.txt  q2
+root@DESKTOP-FIOVAPR:~/linuxassignment# tr 'a-z' 'A-Z' <input.txt> output.txt
+root@DESKTOP-FIOVAPR:~/linuxassignment# ls
+Q2  data.txt  docs  docs1.zip  file1.txt  input.txt  new  number.txt  output.txt  q2
+root@DESKTOP-FIOVAPR:~/linuxassignment# tail -3 number.txt
+45ere all the treasure of thy lusty days;root@DESKTOP-FIOVAPR:~/linuxassignment#
+4oot@DESKTOP-FIOVAPR:~/linuxassignment# head 10 data.txt
+55root@DESKTOP-FIOVAPR:~/linuxassignment# cat > duplicate.txt
+aa> data.txt <==
+aaom fairest creatures we desire increase,
+xxat thereby beauty's rose might never die,
+rrt as the riper should by time decease,
+dds tender heir might bear his memory:
+cct thou contracted to thine own bright eyes,
+ffthin thine own bud buriest thy content,
+ggg tender churl mak'st waste in niggarding:
+ggty the world, or else this glutton be,
+vo eat the world's due, by the grave and thee.
+vhen forty winters shall besiege thy brow,
+abot@DESKTOP-FIOVAPR:~/linuxassignment# cat > number.txt
+a
+b
+croot@DESKTOP-FIOVAPR:~/linuxassignment#
+root@DESKTOP-FIOVAPR:~/linuxassignment# uniq duplicate.txt
+aa
+xx
+rr
+dd
+cc
+ff
+ggg
+gg
+v5
+ab
+a5root@DESKTOP-FIOVAPR:~/linuxassignment# head 10 number.txt
+bead: cannot open '10' for reading: No such file or directory
+c=> number.txt <==
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat > fruit.txt
+mango
+peru
+kaju
+limbu
+cooconut
+jackfruit
+mango
+peru
+limbu
+mangoDESKTOP-FIOVAPR:~/linuxassignment# tail -5 number.txt
+root@DESKTOP-FIOVAPR:~/linuxassignment# uniq -u fruit.txt
+mango
+peru
+kaju
+limbut@DESKTOP-FIOVAPR:~/linuxassignment# cat > input.txt
+cooconutdesh
+jackfruitTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr[:lower:] [:upper:]
+mangoower:]: command not found
+peru@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:]
+limbuSANDESH
+mangoDESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:] mv i
+root@DESKTOP-FIOVAPR:~/linuxassignment# uniq -c fruit.txt
+      1 mangop' for more information.
+      1 peru-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:] | mv i
+      1 kajudestination file operand after 'i'
+      1 limbup' for more information.
+      1 cooconutVAPR:~/linuxassignment# ls
+      1 jackfruits  docs1.zip  file1.txt  input.txt  new  number.txt  q2
+      1 mangoFIOVAPR:~/linuxassignment# tr 'a-z' 'A-Z' <input.txt> output.txt
+      1 peru-FIOVAPR:~/linuxassignment# ls
+      1 limbu docs  docs1.zip  file1.txt  input.txt  new  number.txt  output.txt  q2
+      1 mangoFIOVAPR:~/linuxassignment# tail -3 number.txt
+root@DESKTOP-FIOVAPR:~/linuxassignment# sort fruit.txt | uniq -c
+      1 cooconut
+      1 jackfruitOVAPR:~/linuxassignment# cat > duplicate.txt
+      1 kaju
+      2 limbu
+      3 mango
+      2 peru
+root@DESKTOP-FIOVAPR:~/linuxassignment#
+5: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 5
+5: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 45
+45: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 5
+5: command not found:~/linuxassignment# uniq duplicate.txt
+root@DESKTOP-FIOVAPR:~/linuxassignment# 45
+45: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 55root@DESKTOP-FIOVAPR:~/linuxassignment# head 10 number.txt
+-bash: 55root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# head: cannot open '10' for reading: No such file or directory
+Command 'head:' not found, did you mean:
+  command 'head' from deb coreutils (8.32-4.1ubuntu1)
+Try: apt install <deb name>
+root@DESKTOP-FIOVAPR:~/linuxassignment# ==> number.txt <==
+-bash: ==: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# 1
+1: command not found:~/linuxassignment# cat > fruit.txt
+root@DESKTOP-FIOVAPR:~/linuxassignment# 2
+2: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 3
+3: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 5
+5: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 6
+6: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 5niq -u fruit.txt
+5: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 5
+5: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 45
+45: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# tail -5 number.txt
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found:~/linuxassignment# uniq -c fruit.txt
+root@DESKTOP-FIOVAPR:~/linuxassignment# 5
+5: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 45
+45: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 55root@DESKTOP-FIOVAPR:~/linuxassignment# cat > input.txt
+-bash: 55root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# hellosandesh
+hellosandesh: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr[:lower:] [:upper:]onut
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+tr[:lower:]: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# tr[:lower:]: command not found
+tr[:lower:]:: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:]FIOVAPR:~/linuxassignment#
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# HELLOSANDESH
+HELLOSANDESH: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:] mv i
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+tr: extra operand ‘mv’
+Try 'tr --help' for more information.
+root@DESKTOP-FIOVAPR:~/linuxassignment# tr: extra operand ‘mv’
+Command 'tr:' not found, did you mean:
+  command 'trf' from deb trf (4.09.1-5)
+  command 'trn' from deb trn4 (4.0-test77-14)
+  command 'tr' from deb coreutils (8.32-4.1ubuntu1)
+  command 'trs' from deb konwert (1.8-13.2)
+  command 'tre' from deb tre-command (0.3.6-2)
+Try: apt install <deb name>
+root@DESKTOP-FIOVAPR:~/linuxassignment# Try 'tr --help' for more information.
+Command 'Try' not found, did you mean:
+  command 'pry' from deb pry (0.13.1-2)
+Try: apt install <deb name>
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# cat input.txt | tr [:lower:] [:upper:] | mv i
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+mv: missing destination file operand after 'i'
+Try 'mv --help' for more information.
+root@DESKTOP-FIOVAPR:~/linuxassignment# mv: missing destination file operand after 'i'
+Command 'mv:' not found, did you mean:
+  command 'mv' from deb coreutils (8.32-4.1ubuntu1)
+  command 'mvn' from deb maven (3.6.3-5)
+  command 'mvs' from deb libwww-mediawiki-client-perl (0.31-2.2)
+Try: apt install <deb name>
+root@DESKTOP-FIOVAPR:~/linuxassignment# Try 'mv --help' for more information.
+Command 'Try' not found, did you mean:
+  command 'pry' from deb pry (0.13.1-2)
+Try: apt install <deb name>
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# ls
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# Q2  data.txt  docs  docs1.zip  file1.txt  input.txt  new  number.txt  q2
+Q2: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# tr 'a-z' 'A-Z' <input.txt> output.txt
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# ls
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# Q2  data.txt  docs  docs1.zip  file1.txt  input.txt  new  number.txt  output.txt  q2
+Q2: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# root@DESKTOP-FIOVAPR:~/linuxassignment# tail -3 number.txt
+-bash: root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# 45
+45: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 4
+4: command not found
+root@DESKTOP-FIOVAPR:~/linuxassignment# 55root@DESKTOP-FIOVAPR:~/linuxassignment# cat > duplicate.txt
+-bash: 55root@DESKTOP-FIOVAPR:~/linuxassignment#: No such file or directory
+root@DESKTOP-FIOVAPR:~/linuxassignment# aa
+Command 'aa' not found, but can be installed with:
+apt install astronomical-almanac
+root@DESKTOP-FIOVAPR:~/linuxassignment# aa
+Command 'aa' not found, but can be installed with:
+apt install astronomical-almanac
+root@DESKTOP-FIOVAPR:~/linuxassignment# xx
+Command 'xx' not found, but can be installed with:
+apt install fex-utils
+root@DESKTOP-FIOVAPR:~/linuxassignment# rr
+Command 'rr' not found, but can be installed with:
+apt install rr
+root@DESKTOP-FIOVAPR:~/linuxassignment# dd
+cc
+ff
+ggg
+gg
+v
+v
+ab
+a
+b
+croot@DESKTOP-FIOVAPR:~/linuxassignment#
+root@DESKTOP-FIOVAPR:~/linuxassignment# uniq duplicate.txt
+aa
+xx
+rr
+dd
+cc
+ff
+ggg
+gg
+v
+ab
+a
+b
+c
+root@DESKTOP-FIOVAPR:~/linuxassignment# cat > fruit.txt
+mango
+peru
+kaju
+limbu
+cooconut
+jackfruit
+mango
+peru
+limbu
+mango
+root@DESKTOP-FIOVAPR:~/linuxassignment# uniq -u fruit.txt
+mango
+peru
+kaju
+limbu
+cooconut
+jackfruit
+mango
+peru
+limbu
+mango
+root@DESKTOP-FIOVAPR:~/linuxassignment# uniq -c fruit.txt
+      1 mango
+      1 peru
+      1 kaju
+      1 limb
+
+

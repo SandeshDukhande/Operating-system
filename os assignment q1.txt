@@ -1,0 +1,160 @@
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ cat > file1.txt
+Hello root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ mkdir docs
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ cp file1.txt docs
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ cd docs
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ ls
+file1.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ mv file1.txt file2.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ ls
+file2.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ chmod 744 file2.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ ls -l -a
+total 12
+drwxr-xr-x 2 root root 4096 Mar  7 18:07 .
+drwxr-xr-x 3 uddesh uddesh 4096 Mar  7 18:05 ..
+-rwxr--r-- 1 uddesh uddesh   12 Mar  7 18:06 file2.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ ls -l
+total 4
+-rwxr--r-- 1 uddesh uddesh 12 Mar  7 18:06 file2.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ cd ..
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ ls
+docs  file1.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ ls /
+bin   dev  home  lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ ls *.txt
+file1.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ ls /*.txt
+ls: cannot access '/*.txt': No such file or directory
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ ls / *.txt
+file1.txt
+
+/:
+bin   dev  home  lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+uddesh@LAPTOP-EL9PA5C2:~/LinuxAssignment$ grep file1.txt "Hello"
+grep: Hello: No such file or directory
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ cd docs
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ cd 
+grep: Hello: No such file or directory
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ grep "Hello" file2.txt
+Hello root
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ cd ..
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ grep " Hello" file1.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ cd docs
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ date
+Thu Mar  7 19:06:43 IST 2024
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ ifconfig
+Command 'ifconfig' not found, but can be installed with:
+sudo apt install net-tools
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ sudo apt install net-tools
+[sudo] password for uddesh:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 204 kB of archives.
+After this operation, 819 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]
+Fetched 204 kB in 2s (117 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 24208 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...
+Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+Processing triggers for man-db (2.10.2-1) ...
+uddesh@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.20.95.126  netmask 255.255.240.0  broadcast 172.20.95.255
+        inet6 fe80::215:5dff:fe1d:bf78  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:1d:bf:78  txqueuelen 1000  (Ethernet)
+        RX packets 948  bytes 835347 (835.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 389  bytes 69993 (69.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=2.95 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.020 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.031 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.030 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.041 ms
+64 bytes from 127.0.0.1: icmp_seq=6 ttl=64 time=0.040 ms
+64 bytes from 127.0.0.1: icmp_seq=7 ttl=64 time=0.070 ms
+64 bytes from 127.0.0.1: icmp_seq=8 ttl=64 time=0.097 ms
+64 bytes from 127.0.0.1: icmp_seq=9 ttl=64 time=0.027 ms
+64 bytes from 127.0.0.1: icmp_seq=10 ttl=64 time=0.020 ms
+64 bytes from 127.0.0.1: icmp_seq=11 ttl=64 time=0.039 ms
+64 bytes from 127.0.0.1: icmp_seq=12 ttl=64 time=0.025 ms
+64 bytes from 127.0.0.1: icmp_seq=13 ttl=64 time=0.305 ms
+64 bytes from 127.0.0.1: icmp_seq=14 ttl=64 time=6.68 ms
+64 bytes from 127.0.0.1: icmp_seq=15 ttl=64 time=0.019 ms
+64 bytes from 127.0.0.1: icmp_seq=16 ttl=64 time=0.039 ms
+64 bytes from 127.0.0.1: icmp_seq=17 ttl=64 time=0.019 ms
+64 bytes from 127.0.0.1: icmp_seq=18 ttl=64 time=0.020 ms
+64 bytes from 127.0.0.1: icmp_seq=19 ttl=64 time=0.019 ms
+64 bytes from 127.0.0.1: icmp_seq=20 ttl=64 time=0.027 ms
+^C
+--- 127.0.0.1 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19720ms
+rtt min/avg/max/mdev = 0.019/0.525/6.678/1.547 ms
+uddesh@LAPTOP-EL9PA5C2:~/LinuxAssignment/docs$ cd ..
+uddesh@LAPTOP-EL9PA5C2:~/LinuxAssignment$ zip -r docs1.zip docs
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+uddesh@LAPTOP-EL9PA5C2:~/LinuxAssignment$ sudo apt install zip
+[sudo] password for uddesh:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 929 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.1 [174 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Fetched 350 kB in 2s (226 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 24257 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.1_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.1) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-12build2_amd64.deb ...
+Unpacking zip (3.0-12build2) ...
+Setting up unzip (6.0-26ubuntu3.1) ...
+Setting up zip (3.0-12build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ zip -r docs1.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ ls
+docs  docs1.zip  file1.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ mkdir newdir
+v@LAPTOP-EL9PA5C2:~/LinuxAssignment$ unzip docs1.zip -d newdir
+Archive:  docs1.zip
+   creating: newdir/docs/
+ extracting: newdir/docs/file2.txt
+root@LAPTOP-EL9PA5C2:~/LinuxAssignment$ vi file1.txt
+rooth@LAPTOP-EL9PA5C2:~/LinuxAssignment$ cat file1.txt
+Hello root
+echo " Onkar"
+uddesh@LAPTOP-EL9PA5C2:~/LinuxAssignment$ sed -i 's/Onkar/root/g' file1.txt
+uddesh@LAPTOP-EL9PA5C2:~/LinuxAssignment$ cat file1.txt
+Hello root
+echo " root"
